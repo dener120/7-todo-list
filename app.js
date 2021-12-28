@@ -79,7 +79,7 @@ class View {
 
     renderTodo(todo) {
         if (!todo) return;
-        this.todoList.insertAdjacentHTML('beforeend', `
+        this.todoList.insertAdjacentHTML('afterbegin', `
                 <li id="todo-id-${todo.id}" class="todo-item ${todo.complete ? 'completed': ''}">
                     <input type="checkbox" ${todo.complete ? 'checked': ''}>
                     <div>
