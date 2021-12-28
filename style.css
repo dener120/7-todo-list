@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    font-size: 1.2rem;
+}
+header {
+    background-color: mediumorchid;
+    color: white;
+    height: 100px;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+form {
+    width: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form input, form select {
+    padding: 0.5rem 1rem;
+}
+input[type="text"] {
+    width: 100%;
+}
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+form > button {
+    cursor: pointer;
+    background-color: mediumorchid;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+}
+form > button:hover {
+    background-color: violet;
+}
+
+ul {
+    list-style: none;
+    width: 500px;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+.todo-item {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.close {
+    color: red;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.close:hover {
+    color:tomato
+}
+
+.completed {
+    opacity: .5;
+    color: #888888;
+}
+
+input:active,
+input:focus,
+select:active,
+select:focus{
+    outline: none;
+}
+
+.invalid {
+    border: 3px solid #e23d52;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.date {
+    font-size: 0.8rem;
+}
