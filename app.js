@@ -15,13 +15,13 @@ class Model {
         this.updateLocalStorage();
     }
 
-    addTodo(todoText, author, deadline) {
+    addTodo(text, author, deadline) {
         const todo = {
             id: this.todos.length > 0 ? this.todos[this.todos.length - 1].id + 1 : 1,
-            text: todoText,
-            author: author,
+            text,
+            author,
             complete: false,
-            deadline: deadline,
+            deadline,
         };
         this.todos.push(todo);
         this.updateLocalStorage();
@@ -32,11 +32,8 @@ class Model {
         this.todos = this.todos.map(todo => {
             if (todo.id === id) {
                 return {
-                    id: todo.id,
-                    text: todo.text,
-                    author: todo.author,
+                    ...todo,
                     complete: !todo.complete,
-                    deadline: todo.deadline
                 }
             }
             return todo
